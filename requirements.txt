@@ -1,0 +1,3 @@
+Cython
+wheel
+transformers==4.12.0
