@@ -16,3 +16,15 @@ target_compile_features(out_of_memory PRIVATE cxx_std_14)
 
 target_include_directories(out_of_memory PRIVATE ${TORCH_INCLUDE_DIRS})
 target_link_libraries(out_of_memory PRIVATE ${TORCH_LIBRARIES})
+
+add_executable(gaps gaps.cpp)
+target_compile_features(gaps PRIVATE cxx_std_14)
+
+target_include_directories(gaps PRIVATE ${TORCH_INCLUDE_DIRS})
+target_link_libraries(gaps PRIVATE ${TORCH_LIBRARIES})
+
+add_executable(batched_threading batched_threading.cpp)
+target_compile_features(batched_threading PRIVATE cxx_std_14)
+
+target_include_directories(batched_threading PRIVATE ${TORCH_INCLUDE_DIRS})
+target_link_libraries(batched_threading PRIVATE ${TORCH_LIBRARIES})
